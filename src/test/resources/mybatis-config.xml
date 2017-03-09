@@ -15,12 +15,28 @@
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
+           <!-- 
             <dataSource type="POOLED" >
                 <property name="driver" value="oracle.jdbc.OracleDriver"/>
                 <property name="url" value="jdbc:oracle:thin:@10.29.20.209:1521:orcl"/>
                 <property name="username" value="financial_product"/>
                 <property name="password" value="fpadmin"/>
                 <property name="poolMaximumActiveConnections" value="50"/>
+            </dataSource> -->
+            <!-- myself try 
+            <dataSource type="POOLED">
+            	<property name="driver" value="org.postgresql.Driver"/>
+            	<property name="url" value="jdbc:postgresql://127.0.0.1:5432/city"/>
+            	<property name="username" value="vu_api"/>
+            	<property name="password" value="123456"/>
+            	<property name="poolMaximumActiveConnections" value="5"/>
+            </dataSource>-->
+            <dataSource type="POOLED">
+            	<property name="driver" value="com.mysql.jdbc.Driver"/>
+            	<property name="url" value="jdbc:mysql://172.16.4.138:3310/vliveshow_m"/>
+            	<property name="username" value="v_user"/>
+            	<property name="password" value="123456"/>
+            	<property name="poolMaximumActiveConnections" value="5"/>
             </dataSource>
         </environment>
     </environments>
